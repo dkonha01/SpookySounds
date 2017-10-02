@@ -24,10 +24,14 @@ AudioSample drip;
 AudioSample friendly_alien;
 AudioSample maniac_laugh;
 
+int value = 0;
+
 void setup()
 {
   size(512, 200, P3D);
   minim = new Minim(this);
+  
+
   
  // Serial serial = new Serial(this, "/dev/cu.usbmodem14111", 19200);
  // receiver = new ValueReceiver(this, serial);
@@ -64,56 +68,29 @@ void draw()
 {
       background(0);
       stroke(255);
-  
-      if (mousePressed) {
-           queen.trigger(); 
-           delay(33);
-           queen.trigger();
-      } else {
-
-    
-
-            dirt.trigger();
- 
-            bats.trigger();
-            
-              if (mousePressed) {
-                 queen.trigger(); 
-                 delay(33);
-                 queen.trigger();
-              }
-              
-            delay (int(random(111, 1133)));
-            
-              if (mousePressed) {
-                 queen.trigger(); 
-                 delay(33);
-                 queen.trigger();
-              }
-              
-
- 
-            drip.trigger();
-            
-              if (mousePressed) {
-                 queen.trigger(); 
-                 delay(33);
-                 queen.trigger();
-              }
-              
-            
-            delay (int(random(333, 1133)));
-            
-              if (mousePressed) {
-                 queen.trigger(); 
-                 delay(33);
-                 queen.trigger();
-              }
-              
-            dirt.trigger();
-    
+      
+       dirt.trigger();
+       delay (int(random(111, 1133)));
+       bats.trigger();         
+       delay (int(random(111, 1133)));
+       drip.trigger();         
+       delay (int(random(333, 1133)));
+       dirt.trigger();   
 
          
-       } 
-       delay (int(random(1133)));
+ } 
+ 
+
+
+void keyPressed() {
+  if (value == 0) {
+    
+       queen.trigger();
+       delay (int(random(111, 1133)));
+       
+  } else {
+    
+
  }
+  
+}
