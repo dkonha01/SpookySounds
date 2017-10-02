@@ -10,6 +10,8 @@ import ddf.minim.*;
 
 Minim minim;
 AudioSample door;
+AudioSample dirt;
+AudioSample queen;
 AudioSample cave;
 AudioSample planet;
 AudioSample poltergeist;
@@ -44,6 +46,8 @@ void setup()
   
   bats = minim.loadSample( "Bats.wav", 1024 );
   door = minim.loadSample( "door_creak.wav", 512 );
+  dirt = minim.loadSample( "SpiderDirt_org.wav", 512 );
+  queen = minim.loadSample( "SpiderQueen_alt1.wav", 512 );
   cave = minim.loadSample("cave.wav", 512);
   planet = minim.loadSample("missing_planet_select.wav", 512);
   poltergeist = minim.loadSample("poltergeist_mono.wav", 1024);
@@ -58,115 +62,77 @@ void setup()
 
 void draw()
 {
-  background(0);
-  stroke(255);
+      background(0);
+      stroke(255);
+  
+      if (mousePressed) {
+           queen.trigger(); 
+           delay(33);
+           queen.trigger();
+      } else {
+
+     //}
       int analogValue = int(random(127));
       println (analogValue);
  
-      if (analogValue <=126 && analogValue >116){
-            cave.trigger(); 
-            delay(1333);
+      if (analogValue <=126 && analogValue >107){
+       
+      
             bats.trigger();
             little_demon.stop();
             poltergeist.stop();
-            delay (int(random(4333)));
+    
       }
       
-      else if (analogValue <=116 && analogValue >100){
-            door.trigger();
-            delay(933);
-            little_demon.stop();
-            cave.stop();
-            bats.stop();
-            chains.stop();
-            planet.stop();
-            friendly_alien.trigger();
+       
+       else if (analogValue <=107 && analogValue >95){
+            //chains.trigger();
+            dirt.trigger();
+       
             poltergeist.stop();
-           // delay(733);
-            delay (int(random(4333)));
-      }   
-      
-       else if (analogValue <=100 && analogValue >85){
-            chains.trigger();
-            delay (int(random(733)));  
-            poltergeist.stop();
-           // planet.stop();
-            bats.stop();
-           // cave.stop();
-            door.stop(); 
-            delay(133);
-            liveghost.trigger();   
-            delay (int(random(3333)));
+        
        }
        
-      else if (analogValue <=85 && analogValue >70){
-            little_demon.trigger();
-            delay (int(random(733)));  
-            poltergeist.stop();
-            maniac_laugh.stop();
-           // planet.stop();
+      else if (analogValue <=95 && analogValue >70){
+        
             bats.stop();
-           // cave.stop();
-            door.stop(); 
-            delay(733);
-            little_demon.trigger();   
-            delay (int(random(3333)));
+       
+        
       }
       
       else if (analogValue <=70 && analogValue >50){
            // planet.stop();
-            bats.stop();
-            maniac_laugh.trigger();
-            liveghost.stop();
-            door.stop();
+            dirt.trigger();
+            bats.trigger();
+           // maniac_laugh.trigger();
+           // liveghost.stop();
+           // door.stop();
             delay(333);
-            chains.stop();
+           // chains.stop();
             drip.trigger();
-            cave.trigger(); 
-            delay(int(random(1777)));
-            poltergeist.stop();
-            maniac_laugh.trigger();
-            delay(int(random(1777)));
+     
           
       }
       
        else if (analogValue <=50 && analogValue >30){
            // planet.stop();
+            drip.trigger();
+            dirt.trigger();
             bats.stop();
             chains.stop();
             cave.stop();
-            planet.stop();
-            poltergeist.trigger();
-            maniac_laugh.stop();
-            liveghost.stop();
-            door.stop();
-            delay(2333);
+         
           
       }
-        else if (analogValue <=30 && analogValue >15){
-           // planet.stop();
-            bats.stop();
-            poltergeist.stop();
-            liveghost.stop();
-            door.stop();
-            //chains.trigger();
-            delay(int(random(1777)));
-            carnival.trigger();
-            delay(2333);
-          
-      }
-
+   
       else {
-            planet.trigger();
+          //  planet.trigger();
             poltergeist.stop();
             liveghost.stop();
             carnival.stop();
             door.stop();  
-           // cave.stop();
-            //cave.trigger(); 
-            delay (int(random(3733)));
+         
        } 
-       delay (int(random(3733)));
+       delay (int(random(133)));
+ }
 }
-
-
