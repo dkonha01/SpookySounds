@@ -71,68 +71,49 @@ void draw()
            queen.trigger();
       } else {
 
-     //}
-      int analogValue = int(random(127));
-      println (analogValue);
- 
-      if (analogValue <=126 && analogValue >107){
-       
-      
-            bats.trigger();
-            little_demon.stop();
-            poltergeist.stop();
     
-      }
-      
-       
-       else if (analogValue <=107 && analogValue >95){
-            //chains.trigger();
+
             dirt.trigger();
-       
-            poltergeist.stop();
-        
-       }
-       
-      else if (analogValue <=95 && analogValue >70){
-        
-            bats.stop();
-       
-        
-      }
-      
-      else if (analogValue <=70 && analogValue >50){
-           // planet.stop();
-            dirt.trigger();
+ 
             bats.trigger();
-           // maniac_laugh.trigger();
-           // liveghost.stop();
-           // door.stop();
-            delay(333);
-           // chains.stop();
+            
+              if (mousePressed) {
+                 queen.trigger(); 
+                 delay(33);
+                 queen.trigger();
+              }
+              
+            delay (int(random(111, 1133)));
+            
+              if (mousePressed) {
+                 queen.trigger(); 
+                 delay(33);
+                 queen.trigger();
+              }
+              
+
+ 
             drip.trigger();
-     
-          
-      }
-      
-       else if (analogValue <=50 && analogValue >30){
-           // planet.stop();
-            drip.trigger();
+            
+              if (mousePressed) {
+                 queen.trigger(); 
+                 delay(33);
+                 queen.trigger();
+              }
+              
+            
+            delay (int(random(333, 1133)));
+            
+              if (mousePressed) {
+                 queen.trigger(); 
+                 delay(33);
+                 queen.trigger();
+              }
+              
             dirt.trigger();
-            bats.stop();
-            chains.stop();
-            cave.stop();
-         
-          
-      }
-   
-      else {
-          //  planet.trigger();
-            poltergeist.stop();
-            liveghost.stop();
-            carnival.stop();
-            door.stop();  
+    
+
          
        } 
-       delay (int(random(133)));
+       delay (int(random(1133)));
  }
-}
