@@ -12,7 +12,7 @@ void setup()
   minim = new Minim(this);
 
   queen = minim.loadSample( "SpiderQueen_org.wav", 512 );
-  monkey = minim.loadSample( "SpiderMonkeyHowl_org.wav", 512 );
+  monkey = minim.loadSample( "SpiderMonkeyHowl_alt1.wav", 512 );
   
  
 }
@@ -25,9 +25,12 @@ void draw()
 void keyPressed() { {
     
        queen.trigger();  
-       delay (int(random(37, 137)));
+       delay (int(random(77, 237)));
        monkey.trigger();
        delay (int(random(111, 1133)));   
+       queen.trigger(); 
+       delay (int(random(77, 237)));
+       monkey.trigger();
  }
   
 }
