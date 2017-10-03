@@ -68,7 +68,7 @@ void draw()
 {
       background(0);
       stroke(255);
-      
+   /*   
        dirt.trigger();
        delay (int(random(111, 1133)));
        bats.trigger();         
@@ -77,7 +77,7 @@ void draw()
        delay (int(random(333, 1133)));
        dirt.trigger();   
 
-         
+     */    
  } 
  
 
