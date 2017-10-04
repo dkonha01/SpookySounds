@@ -13,6 +13,7 @@ Minim minim;
 AudioSample bats;
 AudioSample crawly;
 AudioSample drip;
+AudioSample goo;
 
 
 void setup()
@@ -30,9 +31,10 @@ void setup()
   // will sound corrupted, in that case, you can just increase
   // the buffer size.
   
-  bats = minim.loadSample( "Bats.wav", 1024 );
+  bats = minim.loadSample( "Bats.wav", 512 );
   crawly = minim.loadSample( "SpiderDirtLouder_alt1.wav", 1024 );
   drip = minim.loadSample("drip.wav", 512);
+  goo = minim.loadSample( "Goo.wav", 1024 );
 
 }
 
@@ -53,15 +55,16 @@ void draw()
       else if (analogValue <=116 && analogValue >100){
             crawly.trigger();
             bats.stop();
+            goo.stop();
          
       }   
       
        else if (analogValue <=100 && analogValue >85){
-            crawly.trigger();
+           
             delay (int(random(733)));  
-       
+            crawly.trigger();
             delay(133);
-            bats.trigger();
+            goo.trigger();
         
        }
        
@@ -70,6 +73,7 @@ void draw()
             bats.stop();
             drip.trigger();
             delay(733);
+            goo.stop();
           
       }
       
@@ -88,14 +92,14 @@ void draw()
       
        else if (analogValue <=50 && analogValue >30){
          
-            crawly.trigger();
+           // crawly.trigger();
             delay(2333);
             crawly.stop();
           
       }
         else if (analogValue <=30 && analogValue >15){
           
-            crawly.trigger();  
+            goo.trigger();  
             drip.stop();
             //bats.trigger();
          

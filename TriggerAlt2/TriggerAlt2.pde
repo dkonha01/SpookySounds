@@ -5,6 +5,7 @@ Minim minim;
 
 AudioSample monkey;
 AudioSample queen;
+AudioSample robot;
 
 void setup()
 {
@@ -13,7 +14,7 @@ void setup()
 
   queen = minim.loadSample( "SpiderQueen_org.wav", 512 );
   monkey = minim.loadSample( "SpiderMonkeyHowl_alt1.wav", 512 );
-  
+  robot = minim.loadSample( "Robot.wav", 512 );
  
 }
 void draw()
@@ -25,10 +26,10 @@ void draw()
 void keyPressed() { {
     
        queen.trigger();  
-       delay (int(random(77, 237)));
+       delay (int(random(37, 137)));
        monkey.trigger();
-       delay (int(random(111, 1133)));   
-       queen.trigger(); 
+       delay (int(random(11, 313)));   
+       robot.trigger(); 
        delay (int(random(77, 237)));
        monkey.trigger();
  }
