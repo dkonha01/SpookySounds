@@ -79,22 +79,19 @@ void draw()
       
       else if (analogValue <=70 && analogValue >50){
            
-            delay(333);
- 
-            drip.trigger();
-        
+            drip.trigger();     
             delay(int(random(1777)));
-            crawly.trigger();
-       
+            crawly.trigger();      
             delay(int(random(1777)));
+            drip.stop();
           
       }
       
        else if (analogValue <=50 && analogValue >30){
-         
-           // crawly.trigger();
+                 
+            goo.trigger();
+            drip.stop();
             delay(2333);
-            crawly.stop();
           
       }
         else if (analogValue <=30 && analogValue >15){

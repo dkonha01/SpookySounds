@@ -25,10 +25,10 @@ void draw()
  
 void keyPressed() { {
     
-       queen.trigger();  
-       delay (int(random(37, 137)));
-       monkey.trigger();
-       delay (int(random(11, 313)));   
+       queen.trigger();
+       delay (int(random(157, 237)));
+       queen.trigger();
+       delay (int(random(111, 193)));   
        robot.trigger(); 
        delay (int(random(77, 237)));
        monkey.trigger();
