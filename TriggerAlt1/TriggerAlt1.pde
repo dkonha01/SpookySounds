@@ -12,8 +12,10 @@ Minim minim;
 
 AudioSample bats;
 AudioSample crawly;
+AudioSample crawlySlo;
 AudioSample drip;
 AudioSample goo;
+AudioSample gooSelect;
 
 
 void setup()
@@ -35,6 +37,9 @@ void setup()
   crawly = minim.loadSample( "SpiderDirtLouder_alt1.wav", 1024 );
   drip = minim.loadSample("drip.wav", 512);
   goo = minim.loadSample( "Goo.wav", 1024 );
+  gooSelect = minim.loadSample( "GooSelect.wav", 512);
+  crawlySlo = minim.loadSample( "SDL_2_slo.wav");
+  
 
 }
 
@@ -47,8 +52,9 @@ void draw()
  
       if (analogValue <=126 && analogValue >116){
        
-            delay(1333);
+            delay(1733);
             bats.trigger();
+            delay (int(random(1733)));  
         
       }
       
@@ -61,10 +67,10 @@ void draw()
       
        else if (analogValue <=100 && analogValue >85){
            
-            delay (int(random(733)));  
+            delay (int(random(1733)));  
             crawly.trigger();
-            delay(133);
-            goo.trigger();
+            delay(733);
+            gooSelect.trigger();
         
        }
        
@@ -72,7 +78,7 @@ void draw()
          
             bats.stop();
             drip.trigger();
-            delay(733);
+            delay(1733);
             goo.stop();
           
       }
@@ -80,9 +86,9 @@ void draw()
       else if (analogValue <=70 && analogValue >50){
            
             drip.trigger();     
-            delay(int(random(1777)));
-            crawly.trigger();      
-            delay(int(random(1777)));
+            delay(int(random(1733)));
+            crawlySlo.trigger();      
+            delay(int(random(3733)));
             drip.stop();
           
       }
@@ -90,17 +96,17 @@ void draw()
        else if (analogValue <=50 && analogValue >30){
                  
             goo.trigger();
-            drip.stop();
-            delay(2333);
+            //drip.stop();
+            delay(1733);
           
       }
         else if (analogValue <=30 && analogValue >15){
           
-            goo.trigger();  
+            gooSelect.trigger();  
             drip.stop();
-            //bats.trigger();
+            bats.trigger();
          
-            delay(int(random(1777)));
+            delay(int(random(3733)));
           
           
       }
@@ -109,5 +115,5 @@ void draw()
          
             delay (int(random(1733)));
        } 
-       delay (int(random(1733)));
+       delay (int(random(3733)));
 }
