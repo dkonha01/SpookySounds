@@ -27,11 +27,17 @@ void keyPressed() { {
     
        queen.trigger();
        delay (int(random(57, 337)));
-       queen.trigger();
-       delay (int(random(111, 293)));   
+       
        robot.trigger(); 
-       delay (int(random(17, 337)));
+       delay (int(random(17, 237)));
+       
+       queen.trigger();
+       delay (int(random(111, 337)));  
+       
+       robot.trigger(); 
+     
        monkey.trigger();
+       delay (int(random(137, 537))); 
  }
   
 }
