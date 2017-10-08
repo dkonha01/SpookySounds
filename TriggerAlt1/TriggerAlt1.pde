@@ -1,11 +1,3 @@
-//import processing.serial.*;
-//import vsync.*;
-
-//  We create a new ValueReceiver to receive values from the arduino
-//ValueReceiver receiver;
-
-//  This is the variable we want to sync from the Arduino to this sketch
-//public int analogValue;
 import ddf.minim.*;
 
 Minim minim;
@@ -55,6 +47,7 @@ void draw()
             delay(1733);
             bats.trigger();
             delay (int(random(1733)));  
+            goo.stop();
         
       }
       
@@ -62,13 +55,14 @@ void draw()
             crawly.trigger();
             bats.stop();
             goo.stop();
+            gooSelect.stop();  
          
       }   
       
        else if (analogValue <=100 && analogValue >85){
            
             delay (int(random(1733)));  
-            crawly.trigger();
+            crawly.stop();
             delay(733);
             gooSelect.trigger();
         
@@ -80,6 +74,7 @@ void draw()
             drip.trigger();
             delay(1733);
             goo.stop();
+            crawly.stop();
           
       }
       
@@ -98,15 +93,19 @@ void draw()
             goo.trigger();
             //drip.stop();
             delay(1733);
+            crawly.stop();
           
       }
         else if (analogValue <=30 && analogValue >15){
           
-            gooSelect.trigger();  
+            gooSelect.trigger();
+            crawly.stop();
             drip.stop();
             bats.trigger();
+            goo.stop();
          
             delay(int(random(3733)));
+            crawlySlo.stop(); 
           
           
       }
