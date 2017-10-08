@@ -26,11 +26,11 @@ void draw()
 void keyPressed() { {
     
        queen.trigger();
-       delay (int(random(157, 237)));
+       delay (int(random(57, 337)));
        queen.trigger();
-       delay (int(random(111, 193)));   
+       delay (int(random(111, 293)));   
        robot.trigger(); 
-       delay (int(random(77, 237)));
+       delay (int(random(17, 337)));
        monkey.trigger();
  }
   

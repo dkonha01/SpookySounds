@@ -42,24 +42,16 @@ void draw()
       int analogValue = int(random(127));
       println (analogValue);
  
-      if (analogValue <=126 && analogValue >116){
+      if (analogValue <=126 && analogValue >109){
        
-            delay(1733);
+         
             bats.trigger();
             delay (int(random(1733)));  
-            goo.stop();
+            gooSelect.stop();
         
       }
       
-      else if (analogValue <=116 && analogValue >100){
-            crawly.trigger();
-            bats.stop();
-            goo.stop();
-            gooSelect.stop();  
-         
-      }   
-      
-       else if (analogValue <=100 && analogValue >85){
+       else if (analogValue <=109 && analogValue >93){
            
             delay (int(random(1733)));  
             crawly.stop();
@@ -68,51 +60,61 @@ void draw()
         
        }
        
-      else if (analogValue <=85 && analogValue >70){
-         
-            bats.stop();
-            drip.trigger();
-            delay(1733);
-            goo.stop();
-            crawly.stop();
-          
-      }
       
-      else if (analogValue <=70 && analogValue >50){
-           
+      else if (analogValue <=93 && analogValue >79){
+            
+            delay (int(random(1733)));  
             drip.trigger();     
             delay(int(random(1733)));
             crawlySlo.trigger();      
             delay(int(random(3733)));
             drip.stop();
+            crawlySlo.stop(); 
           
       }
       
-       else if (analogValue <=50 && analogValue >30){
+            else if (analogValue <=79 && analogValue >67){
+           
+            drip.trigger();     
+            delay(int(random(1733)));
+            crawlySlo.trigger();      
+            delay(int(random(1733)));
+            drip.stop();
+          
+      }
+      
+       else if (analogValue <=67 && analogValue >43){
                  
-            goo.trigger();
-            //drip.stop();
+            goo.stop();
+            drip.trigger();
             delay(1733);
             crawly.stop();
           
       }
-        else if (analogValue <=30 && analogValue >15){
+        else if (analogValue <=43 && analogValue >27){
           
-            gooSelect.trigger();
+            delay(int(random(1733)));
+            goo.trigger();
             crawly.stop();
-            drip.stop();
-            bats.trigger();
-            goo.stop();
-         
             delay(int(random(3733)));
+            drip.stop();          
+            goo.stop();        
+            delay(int(random(1733)));
             crawlySlo.stop(); 
-          
-          
+                  
       }
 
       else {
-         
+        
+            delay(int(random(1733)));
+            crawly.stop();
+            drip.stop();
+            goo.stop();        
+            delay(int(random(1733)));
+            //crawlySlo.trigger();         
             delay (int(random(1733)));
+            gooSelect.stop();
+            
        } 
-       delay (int(random(3733)));
+       delay (int(random(1733)));
 }
