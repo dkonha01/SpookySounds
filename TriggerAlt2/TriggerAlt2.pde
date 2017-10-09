@@ -34,13 +34,21 @@ void keyPressed() { {
        quickly.trigger(); 
        delay (int(random(157, 337)));
        
+       queen.trigger();
+       
+       delay (int(random(157, 337)));  
+       
        robot.trigger();        
        delay (int(random(157, 337)));  
        
        monkey.trigger();               
        delay (int(random(157, 537))); 
        
-       queen.trigger();
+     
+       
+      
+       
+
            
      
  }
