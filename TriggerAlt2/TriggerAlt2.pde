@@ -7,6 +7,7 @@ AudioSample monkey;
 AudioSample queen;
 AudioSample robot;
 AudioSample quickly;
+AudioSample spider;
 
 void setup()
 {
@@ -15,9 +16,9 @@ void setup()
 
   queen = minim.loadSample( "SpiderQueen_org.wav", 512 );
   monkey = minim.loadSample( "SpiderMonkeyHowl_alt1.wav", 512 );
-  robot = minim.loadSample( "Robot.wav", 512 );
+  robot = minim.loadSample( "SpiderRobot.wav", 512 );
   quickly = minim.loadSample( "Quickly.wav", 512 );
- 
+  spider = minim.loadSample( "Spider.wav", 512 );
 }
 void draw()
 {
@@ -27,19 +28,21 @@ void draw()
  
 void keyPressed() { {
     
-       queen.trigger();
+       spider.trigger();
        delay (int(random(157, 337)));
        
        quickly.trigger(); 
-       delay (int(random(117, 237)));
+       delay (int(random(157, 337)));
        
-       queen.trigger();
+       robot.trigger();        
        delay (int(random(157, 337)));  
        
-       robot.trigger(); 
+       monkey.trigger();               
+       delay (int(random(157, 537))); 
+       
+       queen.trigger();
+           
      
-       monkey.trigger();
-       delay (int(random(137, 537))); 
  }
   
 }
