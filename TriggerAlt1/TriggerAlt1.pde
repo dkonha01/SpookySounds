@@ -88,7 +88,7 @@ void draw()
             //goo.stop();
             drip.trigger();
             delay(1733);
-            crawly.stop();
+            //crawly.stop();
           
       }
         else if (analogValue <=43 && analogValue >27){
