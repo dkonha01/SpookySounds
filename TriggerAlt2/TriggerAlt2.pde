@@ -32,7 +32,7 @@ void keyPressed() { {
        delay (int(random(157, 337)));
        
        quickly.trigger(); 
-       delay (int(random(157, 337)));
+       delay (int(random(57, 237)));
        
        quickly.trigger(); 
        
