@@ -47,14 +47,14 @@ void draw()
          
             bats.trigger();
             delay (int(random(1733)));  
-            gooSelect.stop();
+            //gooSelect.stop();
         
       }
       
        else if (analogValue <=109 && analogValue >93){
            
             delay (int(random(1733)));  
-            crawly.stop();
+           // crawly.stop();
             delay(733);
             gooSelect.trigger();
         
@@ -85,7 +85,7 @@ void draw()
       
        else if (analogValue <=67 && analogValue >43){
                  
-            goo.stop();
+            //goo.stop();
             drip.trigger();
             delay(1733);
             crawly.stop();
@@ -96,24 +96,24 @@ void draw()
             delay(int(random(1733)));
             goo.trigger();
             crawly.stop();
-            delay(int(random(3733)));
+            delay(int(random(5733)));
             drip.stop();          
-            goo.stop();        
-            delay(int(random(1733)));
+            //goo.stop();        
+            delay(int(random(3733)));
             crawlySlo.stop(); 
                   
       }
 
       else {
         
-            delay(int(random(1733)));
+            delay(int(random(3733)));
             crawly.stop();
             drip.stop();
-            goo.stop();        
+           // goo.stop();        
             delay(int(random(1733)));
-            //crawlySlo.trigger();         
+            crawlySlo.stop();         
             delay (int(random(1733)));
-            gooSelect.stop();
+            gooSelect.trigger();
             
        } 
        delay (int(random(1733)));
