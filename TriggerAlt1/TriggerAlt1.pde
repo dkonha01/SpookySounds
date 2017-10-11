@@ -8,6 +8,7 @@ AudioSample crawlySlo;
 AudioSample drip;
 AudioSample goo;
 AudioSample gooSelect;
+AudioSample bot;
 
 
 void setup()
@@ -31,6 +32,7 @@ void setup()
   goo = minim.loadSample( "Goo.wav", 1024 );
   gooSelect = minim.loadSample( "GooSelect.wav", 512);
   crawlySlo = minim.loadSample( "SDL_2_slo.wav");
+  bot = minim.loadSample( "SpiderRobot.wav", 512 );
   
 
 }
@@ -57,6 +59,7 @@ void draw()
            // crawly.stop();
             delay(733);
             gooSelect.trigger();
+            bot.trigger();
         
        }
        
@@ -67,7 +70,7 @@ void draw()
             drip.trigger();     
             delay(int(random(1733)));
             crawlySlo.trigger();      
-            delay(int(random(3733)));
+            delay(int(random(1733)));
             drip.stop();
             crawlySlo.stop(); 
           
@@ -86,7 +89,7 @@ void draw()
        else if (analogValue <=67 && analogValue >43){
                  
             //goo.stop();
-            drip.trigger();
+            bot.trigger();
             delay(1733);
             //crawly.stop();
           
@@ -108,7 +111,7 @@ void draw()
         
             delay(int(random(3733)));
             crawly.stop();
-            drip.stop();
+            bot.stop();
            // goo.stop();        
             delay(int(random(1733)));
             crawlySlo.stop();         
