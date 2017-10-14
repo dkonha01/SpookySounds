@@ -29,35 +29,29 @@ void draw()
 void keyPressed() { {
     
        spider.trigger();
-       delay (int(random(157, 337)));
+      // delay (int(random(157, 337)));
        
        quickly.trigger(); 
        delay (int(random(57, 237)));
        
-       quickly.trigger(); 
+     //  quickly.trigger(); 
        
-       delay (int(random(57, 137))); 
+     //  delay (int(random(57, 137))); 
        
        queen.trigger();
        
-       delay (int(random(157, 337)));  
+      // delay (int(random(157, 337)));  
        
-       spider.trigger();
+      // spider.trigger();
        
-       delay (int(random(157, 337)));  
+      // delay (int(random(157, 337)));  
        
        robot.trigger();        
-       delay (int(random(57, 237)));  
+      // delay (int(random(57, 237)));  
        
        monkey.trigger();               
-       delay (int(random(557, 937))); 
-       
-     
-       
-      
-       
-
-           
+      // delay (int(random(557, 937))); 
+               
      
  }
   
